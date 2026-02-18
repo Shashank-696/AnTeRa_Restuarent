@@ -1,35 +1,61 @@
+
 .gallery-page{
-  padding:120px 10%;
-  text-align:center;
+  padding: 60px 8%;
+  background: #f9f9f9;
+  text-align: center;
 }
 
 .gallery-page h1{
-  margin-bottom:40px;
-  font-size:40px;
-}
-.gallery-grid-drinks,
-.gallery-grid{
-  display:grid;
-  grid-template-columns:repeat(3, 1fr);
-  gap:25px;
+  font-size: 32px;
+  margin-bottom: 15px;
 }
 
-.gallery-grid img{
-  width:100%;
-  height:250px;
-  object-fit:cover;
-  border-radius:8px;
-  transition:0.3s;
-}
-.gallery-grid-drinks img:hover,
-.gallery-grid img:hover{
-  transform: translateY(-10px);
 
+.gallery-grid,
+.gallery-grid-drinks{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); 
+  gap: 25px;
+  margin-top: 30px;
 }
+
+
+.gallery-grid img,
 .gallery-grid-drinks img{
-    width:100%;
-    height:350px;
-    object-fit:cover;
-    border-radius:8px;
-    transition:0.3s;
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+  transition: transform 0.3s ease;
+}
+
+.gallery-grid img:hover,
+.gallery-grid-drinks img:hover{
+  transform: scale(1.05);
+}
+
+
+@media (max-width: 992px){
+  .gallery-grid,
+  .gallery-grid-drinks{
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+
+@media (max-width: 400px){
+  .gallery-grid,
+  .gallery-grid-drinks{
+    grid-template-columns: 1fr;   
+  }
+
+  .gallery-grid img,
+  .gallery-grid-drinks img{
+    height: auto;
+  }
+
+  .gallery-page{
+    padding: 40px 5%;
+  }
 }
