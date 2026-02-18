@@ -1,0 +1,34 @@
+
+.mainmenu img{
+  width:90%;
+  margin-left: 60px;
+  padding:auto;
+  height:auto;
+  display:block;
+}
+
+.drinksmenu{
+  display:flex;
+  gap:20px;
+  padding:40px;
+  justify-content:center;
+  flex-wrap:wrap;
+}
+
+.drink-card{
+  width:280px;
+  border-radius:12px;
+  overflow:hidden;
+  box-shadow:0 4px 10px rgba(0,0,0,0.2);
+  transition:0.3s;
+}
+
+.drink-card img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+}
+
+.drink-card:hover{
+  transform:scale(1.05);
+}
